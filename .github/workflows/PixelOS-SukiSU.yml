@@ -67,7 +67,7 @@ jobs:
         working-directory: ${{ env.WORKSPACE_DIR }}
         run: |
 
-          repo init -u https://github.com/oplus-giulia-dev/android_device_oneplus_giulia.git -b oneplus/${{ env.CPU }} -m ${{ env.FEIL }}.xml --depth=1
+          repo init -u https://github.com/oplus-giulia-dev/android_kernel_oneplus_sm8650-modules.git -b oneplus/${{ env.CPU }} -m ${{ env.FEIL }}.xml --depth=1
           repo sync
           
           find kernel_platform -name "abi_gki_protected_exports_*" -delete || echo "No protected exports found!"
